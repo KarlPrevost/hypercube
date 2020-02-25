@@ -1,0 +1,88 @@
+body {
+
+background-color: red;
+}
+#box-container{
+	position:relative;
+	min-height:380px;
+	/* padding: 190px 0; */
+}
+
+#box-wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	perspective: 1500px;
+  }
+  
+  .box-area {
+	position: relative;
+	transform-style: preserve-3d;
+	animation-name: rotate;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  }
+  
+  @keyframes rotate {
+	0% {
+	  transform: rotate3d(180deg, 1, 0, 0deg);
+	}
+	100% {
+	  transform: rotate3d(0, 1, 0, 360deg);
+	  ;
+	}
+  }
+  
+  .box {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border: 2px solid #262626;
+  }
+  
+  #box-front {
+	transform: translateX(-100px) translateY(-100px) translateZ(100px);
+	/* background: rgba(255, 16, 107, 0.5); */
+	background: rgba(255, 255, 255, 0.400);
+	background-image: url('image/logo-php-mysql.png');
+  }
+  
+  #box-back {
+	transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+	/* background: rgba(1, 251, 236, 0.5); */
+	background: rgba(255, 255, 255, 0.400);
+	background-image: url('image/logo-python2.png');
+  }
+  
+  #box-right {
+	transform: translateY(-100px) rotateY(90deg);
+	/* background: rgba(4, 255, 116, 0.5); */
+	background: rgba(255, 255, 255, 0.400);
+	background-image: url('image/logo-symfony2.png');
+  }
+  
+  #box-left {
+	transform: translateY(-100px) translateX(-200px) rotateY(90deg);
+	/* background: rgba(216, 255, 0, 0.5); */
+	background: rgba(255, 255, 255, 0.400);
+	background-image: url('image/logo-javascript.png');
+  }
+  
+  #box-top {
+	transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+	/* background: rgba(0, 6, 246, 0.5); */
+	background: rgba(255, 255, 255, 0.400);
+	background-image: url('image/logo-angular.png');
+  }
+  
+  #box-bottom {
+	transform: translateX(-100px) rotateX(90deg);
+	/* background: rgba(255, 30, 0, 0.5); */
+	background: rgba(255, 255, 255, 0.400);
+	background-image: url('image/logo-wordpress2.png');
+  }
+  
+  .box-area {
+	transform: rotateX(90deg) rotateY(90deg);
+  }
